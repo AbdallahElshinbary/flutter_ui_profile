@@ -2,9 +2,7 @@
 
 A new Flutter project.
 
-![](https://i.imgur.com/u4yCazm.png)
-![](https://i.imgur.com/zNhbOLF.png)
-![](https://i.imgur.com/sVCVMru.png)
+![](https://i.imgur.com/u4yCazm.png)  ![](https://i.imgur.com/zNhbOLF.png)  ![](https://i.imgur.com/sVCVMru.png)
 
 ## Getting Started
 

@@ -1,6 +1,10 @@
-# social_app
+# flutter_ui_app
 
 A new Flutter project.
+
+![](https://i.imgur.com/u4yCazm.png)
+![](https://i.imgur.com/zNhbOLF.png)
+![](https://i.imgur.com/sVCVMru.png)
 
 ## Getting Started
 

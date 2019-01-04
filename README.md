@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-![](https://i.imgur.com/u4yCazm.png)  ![](https://i.imgur.com/zNhbOLF.png)  ![](https://i.imgur.com/sVCVMru.png)
+<img src='https://i.imgur.com/u4yCazm.png' width='500' size='500' />
 
 ## Getting Started
 

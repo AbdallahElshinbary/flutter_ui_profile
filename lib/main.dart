@@ -28,8 +28,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   int pageIndex = 0;
-  double start, height = 100;
+  double height = 100;
   bool follow = false;
+  bool swipeUp;
 
   AnimationController _controller;
   Animation<Offset> animationSlide;
@@ -150,16 +151,24 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     );
   }
 
-  void _onPanStart(DragStartDetails details) {
-    start = details.globalPosition.dy;
+  _onVerticalDragUpdate(DragUpdateDetails details) {
+    setState(() {
+      height -= details.primaryDelta;
+      swipeUp = (details.primaryDelta < 0);
+      if (height < 100.0) {
+        height = 100.0;
+      } else if (height > 400.0) {
+        height = 400.0;
+      }
+    });
   }
 
-  void _onPanUpdate(DragUpdateDetails details) {
+  _onVerticalDragEnd(DragEndDetails details) {
     setState(() {
-      if (start - details.globalPosition.dy < 0) {
-        height = 100;
-      } else if (start - details.globalPosition.dy > 0) {
-        height = 400;
+      if (swipeUp) {
+        height = 400.0;
+      } else {
+        height = 100.0;
       }
     });
   }
@@ -231,8 +240,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       ),
                     ),
                     GestureDetector(
-                      onPanStart: _onPanStart,
-                      onPanUpdate: _onPanUpdate,
+                      onVerticalDragUpdate: _onVerticalDragUpdate,
+                      onVerticalDragEnd: _onVerticalDragEnd,
                       child: AnimatedContainer(
                         duration: Duration(milliseconds: 300),
                         height: height,

@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-<img src='https://i.imgur.com/u4yCazm.png' width='500' size='500' />
+<img src='https://i.imgur.com/u4yCazm.png' width='200' size='200' /> <img src='https://i.imgur.com/zNhbOLF.png' width='200' size='200' /> <img src='https://i.imgur.com/sVCVMru.png' width='200' size='200' />
 
 ## Getting Started
 
